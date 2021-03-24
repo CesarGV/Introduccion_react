@@ -2,7 +2,7 @@ import "./styles.css";
 import Counter from "./counter";
 import Notas from "./notas";
 import Cursos from "./cursos";
-
+import Conditional from "./conditional";
 const notes = [
   {
     id: 1,
@@ -75,6 +75,7 @@ export default function App() {
       <Counter />
       <Notas notes={notes} />
       <Cursos courses={courses} />
+      <Conditional />
     </div>
   );
 }

@@ -17,6 +17,7 @@ const Counter = () => {
 
   return (
     <Fragment>
+      <h1>Counter</h1>
       <button className="btn" onClick={() => handleClick(true)}>
         Aumentar
       </button>
