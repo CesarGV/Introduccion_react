@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 
 const Curso = (props) => {
   const { course } = props;
@@ -15,9 +15,26 @@ const Cursos = (props) => {
       <h1>Cursos</h1>
       <ul>
         <div>
-          {courses.map((course) => (
-            <h2>{course.name}</h2>
-          ))}
+          {courses.map((course) => {
+            console.log(course);
+            const { name, id, parts } = course;
+            let totalExercise = 0;
+            return (
+              <Fragment>
+                <h2>{name}</h2>
+                {parts.map((part) => {
+                  const { name, exercises, id } = part;
+                  totalExercise = totalExercise + exercises;
+                  return (
+                    <p>
+                      {name} | {exercises}
+                    </p>
+                  );
+                })}
+                <p>Total de ejercicios: {totalExercise}</p>
+              </Fragment>
+            );
+          })}
         </div>
       </ul>
     </div>

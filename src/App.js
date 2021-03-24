@@ -3,6 +3,8 @@ import Counter from "./counter";
 import Notas from "./notas";
 import Cursos from "./cursos";
 import Conditional from "./conditional";
+import Agendas from "./agenda";
+
 const notes = [
   {
     id: 1,
@@ -21,6 +23,15 @@ const notes = [
     content: "Para hacer peticiones REST los métodos más usados son GET y POST",
     date: "2020-03-01",
     important: false
+  }
+];
+
+const diarys = [
+  {
+    id: 1,
+    name: "César",
+    tel: "3141600388",
+    important: true
   }
 ];
 
@@ -76,6 +87,7 @@ export default function App() {
       <Notas notes={notes} />
       <Cursos courses={courses} />
       <Conditional />
+      <Agendas diarys={diarys} />
     </div>
   );
 }
