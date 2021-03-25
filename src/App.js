@@ -4,6 +4,9 @@ import Notas from "./notas";
 import Cursos from "./cursos";
 import Conditional from "./conditional";
 import Agendas from "./agenda";
+import Asincrono from "./asincrono";
+import Rest from "./rest";
+import Todo from "./todo";
 
 const notes = [
   {
@@ -88,6 +91,9 @@ export default function App() {
       <Cursos courses={courses} />
       <Conditional />
       <Agendas diarys={diarys} />
+      <Asincrono />
+      <Rest />
+      <Todo />
     </div>
   );
 }
